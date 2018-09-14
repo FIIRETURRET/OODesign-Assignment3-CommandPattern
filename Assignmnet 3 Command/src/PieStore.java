@@ -12,6 +12,13 @@ public class PieStore extends PastryStore{
 		System.out.println(pastry.getEncounter());
 		String s = br. readLine();
 		pastry.solveEncounter(s);
+		
+		pastry = new ButtonDecorator(pastry);
+		System.out.println(pastry.getEncounter());
+		s = br. readLine();
+		pastry.solveEncounter(s);
+		
+		
 		// Pie Encounter 2
 		pastry = new Flour(pastry);
 		System.out.println(pastry.getEncounter());
