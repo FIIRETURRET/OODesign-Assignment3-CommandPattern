@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Assignment {
@@ -13,9 +14,15 @@ public class Assignment {
 		// Create a key listener
 		JTextField textField = new JTextField();
 		textField.addKeyListener(new MKeyListener());
-		JFrame jframe = new JFrame();
+		JFrame jframe = new JFrame("Controller");
 		jframe.add(textField);
 		jframe.setSize(400, 350);
+		JLabel lable1 = new JLabel("Controller commands,"
+				+ "\n s: Search,"
+				+ "\n c: Camp,"
+				+ "\n l: lanturn,"
+				+ "\n t: torch,");
+		jframe.getContentPane().add(lable1);
 		jframe.setVisible(true);
 		
 		//OLD
